@@ -3,9 +3,9 @@ WITH
     SELECT DISTINCT
       "Plan" || "PBP" AS "Plan ID",
       CASE
-        WHEN LEFT("Product ID", 3) = 'HMO' THEN 'Mass Advantage Basic (HMO)'
-        WHEN LEFT("Product ID", 3) = 'Plus HMO' THEN 'Mass Advantage Plus (HMO)'
-        WHEN LEFT("Product ID", 3) = 'PPO' THEN 'Mass Advantage Premiere (PPO)'
+        WHEN LEFT("Pro ID", 3) = 'HMO' THEN ' Basic (HMO)'
+        WHEN LEFT("Pro ID", 3) = 'Plus HMO' THEN ' Plus (HMO)'
+        WHEN LEFT("Pro ID", 3) = 'PPO' THEN ' Premiere (PPO)'
       END AS "Plan Name",
       "Member ID" AS "Member",
       "First Name" AS "First Name",
@@ -39,7 +39,7 @@ WITH
         ELSE "Enroll Eff End Date"
       END AS "Expiration Date"
     FROM
-      "Wipro Membership Ingest"
+      "Membership data"
   ),
   currentyeardata AS (
     SELECT
