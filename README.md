@@ -1,2 +1,2 @@
 # Technical-Implementation-Plan
-To ensure the seamless integration of eligibility files into the Roundtrip system, maintaining data integrity and facilitating efficient ride management for members.
+To ensure the seamless integration of eligibility files into the transportation system, maintain data integrity and facilitate efficient ride management for members.
